@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/header.css">
+    <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <title>To-do List</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>TODOLIST</h1>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <form action="todo-form" class="form">
+                <input type="text" id="todo-input" placeholder="NEWTASK///">
+                <button type="submit" class="button">
+                    ADDNEWTASK
+                </button>
+            </form>
+            <ul id="todo-list"></ul>
+        </div>
+    </main>
+
+<script src="static/scripts/to-do-script.js"></script>
+</body>
+
+
+</html>
