@@ -5,10 +5,12 @@ body {
 }
 
 ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: 174px 400px;
 }
 
 li {
+    color: gold;
     list-style-type: none;
     margin-left: 0,5%;
     width: 174px;
