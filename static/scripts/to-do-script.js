@@ -17,13 +17,29 @@ const renderTasks = () => {
 
         li.textContent = task.text;
 
-        li.addEventListener('click', () => {
+        const buttonsDiv = document.createElement('div')
+        buttonsDiv.classList.add('for-buttons')
+
+        li.insertBefore(buttonsDiv, li.lastChild)
+        list.appendChild(li)
+
+        const completeTask = document.createElement('button');
+        completeTask.classList.add('button')
+        completeTask.textContent = 'COMPLETED';
+
+        completeTask.addEventListener('click', (event) => {
+            event.stopPropagation(); 
+            li.classList.add('completed')
             tasks[index].completed = !tasks[index].completed;
             saveTasks();
             renderTasks();
-        });
+        })
+
+        buttonsDiv.appendChild(completeTask);
+        list.appendChild(buttonsDiv);
 
         const deleteTask = document.createElement('button');
+        deleteTask.classList.add('button')
         deleteTask.textContent = 'DELETE';
 
         deleteTask.addEventListener('click', (event) => {
@@ -33,8 +49,8 @@ const renderTasks = () => {
             renderTasks();
         });
 
-        li.appendChild(deleteTask);
-        list.appendChild(li);
+        buttonsDiv.appendChild(deleteTask);
+        list.appendChild(buttonsDiv);
     });
 };
 
