@@ -4,13 +4,36 @@ body {
     font-family: 'JetBrains Mono', monospace;
 }
 
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    margin-left: 0,5%;
+    width: 174px;
+}
+
 .button {
     background-color: transparent;
-    position: absolute;
     color: #c1c9e1;
+    position: relative;
     border: none;
     border-radius: 10px;
     font-family: 'JetBrains Mono', monospace;
+}
+
+.completed {
+    color: greenyellow;
+}
+
+#todo-input {
+    width: 200px;
+}
+
+.for-buttons {
+    float: right;
+    width: 400px;
 }
 
 input[type=text] {
