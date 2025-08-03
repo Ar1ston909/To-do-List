@@ -10,6 +10,7 @@ ul {
 }
 
 li {
+    word-wrap: break-word;
     color: gold;
     list-style-type: none;
     margin-left: 0,5%;
@@ -19,7 +20,6 @@ li {
 .button {
     background-color: transparent;
     color: #c1c9e1;
-    position: relative;
     border: none;
     border-radius: 10px;
     font-family: 'JetBrains Mono', monospace;
